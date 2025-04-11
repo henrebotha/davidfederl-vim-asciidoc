@@ -143,8 +143,8 @@ syn match asciidocDefList "^.\{-}::\%(\s\|$\)" contains=@Spell
 syn match asciidocCallout "\s\+\zs<\%(\.\|\d\+\)>\ze\s*$" contained
 syn match asciidocCalloutDesc "^\s*\zs<\%(\.\|\d\+\)>\ze\s\+"
 
-
-syn match asciidocCaption "^\.[^.[:space:]].*$" contains=@asciidocInline,@Spell
+syn match asciidocCaption "^\.\.\?[^.[:space:]].*$" contains=@asciidocInline,@Spell
+syn match asciidocCaption "^\.\.\?{[[:alpha:]][[:alnum:]-_:]\{-}}.*$" contains=@asciidocInline,@Spell
 
 syn match asciidocBlockOptions "^\[.\{-}\]\s*$"
 
